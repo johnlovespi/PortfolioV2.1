@@ -22,7 +22,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'NERP-Webpack-RR',
+      title: 'PortfolioV2.1',
       xhtml: true,
       inject: false,
       template: require('html-webpack-template'),
