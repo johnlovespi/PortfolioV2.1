@@ -1,5 +1,5 @@
 {
-  "name": "nerp-webpackv3",
+  "name": "PortfolioV2.1",
   "version": "1.0.0",
   "description": "ReactJs Auth Web App with Webpack",
   "main": "server.js",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dzeignyc/NERP-WebpackV3.git"
+    "url": "git+https://github.com/dzeignyc/PortfolioV2.1.git"
   },
   "author": "Dzeig",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dzeignyc/NERP-WebpackV3/issues"
+    "url": "https://github.com/dzeignyc/PortfolioV2.1/issues"
   },
-  "homepage": "https://github.com/dzeignyc/NERP-WebpackV3#readme",
+  "homepage": "https://github.com/dzeignyc/PortfolioV2.1#readme",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
