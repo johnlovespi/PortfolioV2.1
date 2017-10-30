@@ -1,0 +1,335 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400|Roboto+Slab:100,300,400|Rajdhani:300,400|Roboto+Condensed:300,400);
+
+/*------------------------------ FONTS ---------------------------------------*/
+
+/*font-family: 'Rajdhani', sans-serif;*/
+/*font-family: 'Roboto Condensed', sans-serif;*/
+/*font-family: 'Roboto Slab', serif;*/
+/*font-family: 'Source Sans Pro', sans-serif;*/
+
+/*------------------------------ FONTS END -----------------------------------*/
+
+/*------------------------------ GLOBAL STYLES -------------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html.about-active, body.about-active {
+  overflow-x: hidden;
+}
+
+body {
+  color: #222;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+p, p > a {
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: 300;
+  font-size: .83rem;
+  color: #222;
+}
+
+canvas {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -10;
+  top: 0px;
+}
+
+svg {
+  border-radius:50%;
+}
+
+li {
+  list-style: none;
+}
+
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+a.line {
+border-bottom: 1px solid #222;
+color: #222;
+}
+
+#main {
+  padding: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*------------------------------ GLOBAL STYLES END ---------------------------*/
+
+/*------------------------------ NAV STYLES ----------------------------------*/
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  transform:rotate(180deg);
+}
+
+#nav-container {
+  display: inline-block;
+}
+
+ul#navbar {
+  position: relative;
+  display: inline-flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-style: inset;
+  border-width: 1px;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
+  height: 100vh;
+  width: 3vw;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: .73rem;
+}
+
+ul#navbar > li > a, span#about-btn {
+  margin: .6rem;
+  color: #222;
+  padding: 1rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  line-height: 24px;
+}
+
+#navbar > li.nav-item.vertical-text.mb-auto.p-2 > a {
+  margin-bottom: auto;
+}
+/*------------------------------ NAV STYLES END ------------------------------*/
+
+/*------------------------------ ABOUT SECTION -------------------------------*/
+
+
+#about {
+height: 25rem;
+width: 25rem;
+position: absolute;
+z-index: 1;
+}
+
+#close {
+  color: #000;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 1.15rem;
+  display: inline-block;
+  font-family: 'Roboto Slab', serif;
+}
+#about-container .about-text {
+  position: relative;
+  z-index: 2;
+}
+
+#about-container .about-background {
+  display: table-cell;
+  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  vertical-align: middle;
+}
+
+#about-container .about-background .about {
+  background: #FFF;
+  color: #000;
+  padding: 50px;
+  display: inline-block;
+  border-radius: 3px;
+  width: 35rem;
+  font-weight: 300;
+  position: relative;
+}
+
+#about-container .about-background .about h2 {
+  font-size: 1.5rem;
+  line-height: 25px;
+  margin-bottom: 35px;
+  font-family: 'Roboto Slab', serif;
+}
+
+#about-container .about-background .about p {
+  font-size: .87rem;
+  line-height: 22px;
+}
+
+#about-container .about-background .about .about-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.socialmedia {
+  height: 45px;
+  width: auto;
+  margin: .5rem;
+}
+
+/*------------------------------ ABOUT SECTION END ---------------------------*/
+
+/*------------------------------ ANIMATIONS ----------------------------------*/
+
+#about-container {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  transform: scale(0);
+  z-index: 100;
+}
+
+#about-container.one {
+  transform: scaleY(0.01) scaleX(0);
+  animation: unfoldIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#about-container.one .about-background .about {
+  transform: scale(0);
+  animation: zoomIn 0.5s 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#about-container.one.out {
+  transform: scale(1);
+  animation: unfoldOut 1s 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+#about-container.one.out .about-background .about {
+  animation: zoomOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes unfoldIn {
+  0% {
+    transform: scaleY(0.0035) scaleX(0);
+  }
+  50% {
+    transform: scaleY(0.0035) scaleX(1);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}
+@keyframes unfoldOut {
+  0% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50% {
+    transform: scaleY(0.0035) scaleX(1);
+  }
+  100% {
+    transform: scaleY(0.0035) scaleX(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+/*------------------------------ ANIMATIONS END ------------------------------*/
+
+/*------------------------------ PROJECTS ------------------------------------*/
+
+.project-container {
+position:absolute;
+top:30px;
+left:150px;
+width:75vw;
+}
+
+.head {
+  margin-bottom:2rem;
+}
+
+.objective{
+  width:27rem;
+  display:inline-block;
+}
+
+.project {
+  float: right;
+  width: 27rem;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.project-list {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+}
+
+ul.project-list li a {
+  text-transform: lowercase;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  font-size: .9rem;
+}
+
+/*------------------------------ PROJECTS ------------------------------------*/
+
+
+/*------------------------------ BUTTON STYLES -------------------------------*/
+
+button {
+  box-shadow: rgb(84, 163, 247) 0px 1px 0px 0px inset;
+  background: linear-gradient(rgb(0, 125, 193) 5%, rgb(0, 97, 167) 100%) rgb(0, 125, 193);
+  border-radius: 3px;
+  border: 1px solid rgb(18, 77, 119);
+  display: inline-block;
+  cursor: pointer;
+  font-family: Arial;
+  font-size: 13px;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: rgb(21, 70, 130) 0px 1px 0px;
+}
+
+button a {
+  color: #fff;
+}
+
+/*---------------------------- BUTTON STYLES END -----------------------------*/
