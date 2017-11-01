@@ -2,14 +2,10 @@
 
 ### Technologies used:
 
-- [Express.js](https://expressjs.com/)
-* Framework used for our server
-- [React](https://facebook.github.io/react/)
-* Client side library for our view layer
-- [React-Router](https://reacttraining.com/react-router/)
-* Client side routing for our React client
-- [WebpackV3](http://webpack.github.io/docs/)
-* Application bundler used for our React client
+- [Express.js](https://expressjs.com/) - Framework used for our server
+- [React](https://facebook.github.io/react/) - Client side library for our view layer
+- [React-Router](https://reacttraining.com/react-router/) - Client side routing for our React client
+- [WebpackV3](http://webpack.github.io/docs/) - Application bundler used for our React client
 
 ## Getting Started
 **Install Node Modules with**
