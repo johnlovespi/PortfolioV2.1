@@ -1,4 +1,4 @@
-# NERP/PERN ReactJs Portfolio Template
+# ReactJs Portfolio Template
 
 ### Technologies used:
 
